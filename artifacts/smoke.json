@@ -1,0 +1,9 @@
+[
+  "Actual unpacked MV3 extension injected 3 cards into routed X fixture",
+  "Light/dark/dim and 320px: no horizontal overflow",
+  "Switching removes the actually playing mock media browsing context before the next iframe",
+  "Rapid switches and unmount leave zero stale player frames",
+  "Reused post with album does not retain old track controls",
+  "No page JS errors",
+  "Extension reload invalidates old content context: cards removed, native preview restored"
+]

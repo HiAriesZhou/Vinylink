@@ -1,0 +1,34 @@
+[
+  {
+    "context": "built MV3 content script + routed X fixture + real Apple embed; no real X CSP",
+    "date": "2026-10-16T09:13:21.184Z",
+    "buttons": [
+      "Apple Music\n  \n",
+      "Sign In",
+      "Anti-HeroTaylor Swift",
+      "\n  \nmore",
+      "\n  \n    \n  \nPAUSE"
+    ],
+    "media": {
+      "events": [
+        {
+          "event": "playing",
+          "time": 0,
+          "paused": false,
+          "duration": 90.000998
+        }
+      ],
+      "media": [
+        {
+          "time": 3.837259,
+          "paused": false,
+          "duration": 90.000998
+        }
+      ]
+    }
+  },
+  {
+    "oldFrameDetached": true,
+    "liveFrames": 1
+  }
+]

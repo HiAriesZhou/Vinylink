@@ -1,0 +1,197 @@
+[
+  {
+    "browser": "156.0.8078.4",
+    "date": "2026-10-16T09:13:04.028Z",
+    "environment": "fresh MV3 extension page, no login, no security bypass flags"
+  },
+  {
+    "console": "It is recommended that a robustness level be specified. Not specifying the robustness level could result in unexpected behavior."
+  },
+  {
+    "label": "before user play",
+    "buttons": [
+      "Apple Music\n  \n",
+      "Sign In",
+      "Anti-HeroTaylor Swift",
+      "\n  \nmore",
+      "\n  \n    \n  \nPlay",
+      "View in Apple Music\n  \n"
+    ],
+    "metadata": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Anti-Hero",
+        "loaded": true
+      }
+    ],
+    "media": {
+      "events": [],
+      "media": []
+    }
+  },
+  {
+    "label": "8 seconds after user play",
+    "buttons": [
+      "Apple Music\n  \n",
+      "Sign In",
+      "Anti-HeroTaylor Swift",
+      "\n  \nmore",
+      "\n  \n    \n  \nPAUSE"
+    ],
+    "metadata": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Anti-Hero",
+        "loaded": true
+      }
+    ],
+    "media": {
+      "events": [
+        {
+          "event": "playing",
+          "time": 0,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.164987,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.430666,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.696258,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.961985,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 1.227654,
+          "paused": false,
+          "duration": 90.000998
+        }
+      ],
+      "media": [
+        {
+          "time": 7.863903,
+          "paused": false,
+          "duration": 90.000998,
+          "ended": false
+        }
+      ]
+    }
+  },
+  {
+    "label": "after preview duration",
+    "buttons": [
+      "Apple Music\n  \n",
+      "Sign In",
+      "Anti-HeroTaylor Swift",
+      "\n  \nmore",
+      "\n  \n    \n  \nPlay",
+      "View in Apple Music\n  \n",
+      "Close",
+      "Close\n  \n",
+      "Apple Music\n  \n",
+      "Try It Now",
+      "Sign In"
+    ],
+    "metadata": [
+      {
+        "alt": "",
+        "loaded": true
+      },
+      {
+        "alt": "Anti-Hero",
+        "loaded": true
+      }
+    ],
+    "media": {
+      "events": [
+        {
+          "event": "playing",
+          "time": 0,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.164987,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.430666,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.696258,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 0.961985,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "timeupdate",
+          "time": 1.227654,
+          "paused": false,
+          "duration": 90.000998
+        },
+        {
+          "event": "pause",
+          "time": 90.000998,
+          "paused": true,
+          "duration": 90.000998
+        },
+        {
+          "event": "ended",
+          "time": 90.000998,
+          "paused": true,
+          "duration": 90.000998
+        }
+      ],
+      "media": [
+        {
+          "time": 0,
+          "paused": true,
+          "duration": 90.000998,
+          "ended": false
+        }
+      ]
+    }
+  },
+  {
+    "xError": "page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://x.com/\nCall log:\n  - navigating to \"https://x.com/\", waiting until \"load\"\n"
+  },
+  {
+    "xTitle": "",
+    "xArticles": 0,
+    "xText": "Access to x.com was denied\n\nYou don't have authorization to view this page.\n\nHTTP ERROR 403\nReload"
+  }
+]

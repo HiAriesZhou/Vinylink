@@ -147,3 +147,6 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Generated temporary playback-spike extension (not the installable product)
+/artifacts/spike-extension/

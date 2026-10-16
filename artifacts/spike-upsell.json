@@ -1,0 +1,34 @@
+[
+  {
+    "console": "It is recommended that a robustness level be specified. Not specifying the robustness level could result in unexpected behavior."
+  },
+  {
+    "url": "chrome-extension://paiidbeijimicnjogcijadpibpaoneol/spike.html",
+    "text": ""
+  },
+  {
+    "url": "https://embed.music.apple.com/us/song/1651516417",
+    "text": ""
+  },
+  {
+    "buttons": [
+      "Apple Music\n  \n",
+      "Sign In",
+      "Anti-HeroTaylor Swift",
+      "\n  \nmore",
+      "\n  \n    \n  \nPlay",
+      "View in Apple Music\n  \n"
+    ]
+  },
+  {
+    "paused": [
+      {
+        "paused": true,
+        "time": 7.853553
+      }
+    ]
+  },
+  {
+    "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: /^play$/i })\n    - locator resolved to <button class=\"playback-play__play\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"audio-overlay__modal-content\">…</div> from <embed-upsell-overlay hydrated=\"\">…</embed-upsell-overlay> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div class=\"audio-overlay__modal-content\">…</div> from <embed-upsell-overlay hydrated=\"\">…</embed-upsell-overlay> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    57 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div class=\"audio-overlay__modal-content\">…</div> from <embed-upsell-overlay hydrated=\"\">…</embed-upsell-overlay> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+  }
+]
