@@ -64,3 +64,5 @@ PLAYWRIGHT_BROWSERS_PATH=/tmp/xmc-browsers node scripts/integration.mjs
 - 只保证插件自身最多一个活跃 iframe；真实 Apple 停止在合成 X 的测试与手工检查中验证，不宣称可控制平台外播放。
 - Native iframe 不可见跨域内部错误，15 秒超时只覆盖未收到 load 的情况；地区、登录、曲目不可用在官方播放器中处理。加载失败不自动循环重试。
 - Spotify 启用播放前需要明确解决 Widget 第三方页面条款；Apple 扩展增强场景适用条款仍需确认。无发布、push 或商店操作。
+
+架构边界遵循 `docs/STEER-architecture.md`：卡片 UI 只接收链接/可选标题，不 import X DOM 或 chrome API；第一链接规则只在 X 适配层。单仓库、单扩展，不抽取多站点框架或 npm 包。

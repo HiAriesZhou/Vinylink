@@ -1,6 +1,7 @@
 import { linkFromAnchor, type MusicLink } from './links';
 export const POST='article[data-testid="tweet"]';
-export const HOST='x-music-card';
+import { HOST } from './config';
+export { HOST } from './config';
 export function belongs(el: Element, post: Element): boolean {
   if(el.closest(POST)!==post || el.closest(HOST))return false;
   // X quote cards use role=link + tabindex; nested articles also fail above.

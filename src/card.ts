@@ -2,10 +2,12 @@ import css from './card.css';
 import { capability, embedURL } from './provider';
 import { PlaybackCoordinator } from './coordinator';
 import { config, type ViewState } from './config';
-import { HOST, type Selection } from './posts';
+import { HOST } from './config';
+import type { MusicLink } from './links';
+export interface CardInput {link:MusicLink;title?:string}
 function el<K extends keyof HTMLElementTagNameMap>(tag:K,cls?:string,text?:string):HTMLElementTagNameMap[K]{const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n;}
 export interface Card {host:HTMLElement;dispose:()=>void;theme:()=>void}
-export function createCard(selection:Selection,coordinator:PlaybackCoordinator):Card {
+export function createCard(selection:CardInput,coordinator:PlaybackCoordinator):Card {
   const {link}=selection,cap=capability(link),host=el(HOST as 'div');
   const shadow=host.attachShadow({mode:'open'}),style=el('style');style.textContent=css;
   const box=el('section','card'),row=el('div','row'),record=el('div','record'),copy=el('div','copy'),actions=el('div','actions'),details=el('div','details'),status=el('p','status'),player=el('div','player');
