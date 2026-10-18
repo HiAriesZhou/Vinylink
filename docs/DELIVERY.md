@@ -10,10 +10,10 @@
 - 验证：`pnpm typecheck` 通过；`pnpm test` 43/43；`pnpm build` 通过；`pnpm smoke` 全部断言通过；真实媒体事件见 `artifacts/spike.json` 和 `artifacts/real-integration.json`。
 - 阻塞：真实 X 返回 403，未验证登录态 DOM 与 CSP，不能宣称真实时间线端到端通过。短链网络解析、默认完整元数据、定制播放状态未实现。
 
-安装目录：[dist](../dist/)；压缩包：[x-music-card.zip](../artifacts/x-music-card.zip)。源码 `src/`，测试 `tests/`，合成页面 `fixtures/`，主题/窄屏/真实播放截图 `artifacts/`。
+安装目录：[dist](../dist/)；压缩包：[vinylink.zip](../artifacts/vinylink.zip)。源码 `src/`，测试 `tests/`，合成页面 `fixtures/`，主题/窄屏/真实播放截图 `artifacts/`。
 
 Aries 只需加载 `dist/`，刷新登录 X，检查 Apple 展开后的声音/进度、A/B 切换及卸载停止，并按 [最少人工步骤](manual-smoke.md) 覆盖真实页面。无需交出凭证；若要后续开放 Spotify，具体需要平台确认“用户安装扩展后，在 X 本地注入可见 Widget”是否获许可。Apple 同类扩展增强用途也应在发布前确认。本轮不引入 MusicKit 凭证或后端。
 
-完整执行报告：`/workspace/eng-tasks/tasks/TASK-20261016-x-music-card/EXEC-RESULT.md`。可行性、官方依据与核查日期：[feasibility.md](feasibility.md)。
+完整执行报告：`/workspace/eng-tasks/tasks/TASK-20261016-vinylink/EXEC-RESULT.md`。可行性、官方依据与核查日期：[feasibility.md](feasibility.md)。
 
 遵循工作期间新增的 `STEER-architecture.md`：播放器 UI 不依赖 X DOM/chrome API，首链接逻辑仅在 X 适配层。已保存本地实现提交，未 push。

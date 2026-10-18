@@ -11,7 +11,7 @@ export function createCard(selection:CardInput,coordinator:PlaybackCoordinator):
   const {link}=selection,cap=capability(link),host=el(HOST as 'div');
   const shadow=host.attachShadow({mode:'open'}),style=el('style');style.textContent=css;
   const box=el('section','card'),row=el('div','row'),record=el('div','record'),copy=el('div','copy'),actions=el('div','actions'),details=el('div','details'),status=el('p','status'),player=el('div','player');
-  record.setAttribute('aria-hidden','true');box.setAttribute('aria-label','X Music Card');
+  record.setAttribute('aria-hidden','true');box.setAttribute('aria-label','Vinylink');
   const provider=link.provider==='apple'?'Apple Music':'Spotify';
   const kinds={track:'单曲',album:'专辑',playlist:'歌单',short:'短链',unsupported:'未支持类型'};
   const title=el('p','title',selection.title || `${provider} · ${kinds[link.kind]}`);title.title=title.textContent || '';
@@ -43,9 +43,9 @@ export function createCard(selection:CardInput,coordinator:PlaybackCoordinator):
   for(const event of ['click','dblclick','pointerdown','keydown','keyup'])host.addEventListener(event,e=>e.stopPropagation());
   const theme=()=>{
     const parent=host.parentElement;if(!parent)return;
-    host.style.setProperty('--xmc-fg',getComputedStyle(parent).color);
-    for(let p:HTMLElement|null=parent;p;p=p.parentElement){const bg=getComputedStyle(p).backgroundColor;if(bg && bg!=='rgba(0, 0, 0, 0)' && bg!=='transparent'){host.style.setProperty('--xmc-bg',bg);break;}}
-    host.style.setProperty('--xmc-border','color-mix(in srgb, currentColor 24%, transparent)');
+    host.style.setProperty('--vinylink-fg',getComputedStyle(parent).color);
+    for(let p:HTMLElement|null=parent;p;p=p.parentElement){const bg=getComputedStyle(p).backgroundColor;if(bg && bg!=='rgba(0, 0, 0, 0)' && bg!=='transparent'){host.style.setProperty('--vinylink-bg',bg);break;}}
+    host.style.setProperty('--vinylink-border','color-mix(in srgb, currentColor 24%, transparent)');
   };
   return {host,theme,dispose:()=>{coordinator.close(host);disposed=true;host.remove();}};
 }

@@ -44,7 +44,7 @@ Apple 官方文档允许网页嵌入，但没有专门确认第三方网页的�
 
 ### 已执行结果（2026-10-16）
 
-环境：Linux，Node 20.19.2，pnpm 9.12.0，Playwright 1.64.1，Chrome for Testing 156.0.8078.4 headless；全新 `/tmp/xmc-*` profile，MV3 service worker 确认加载。未使用关闭 CSP/站点隔离/自动播放限制的参数，未登录任何音乐账号。
+环境：Linux，Node 20.19.2，pnpm 9.12.0，Playwright 1.64.1，Chrome for Testing 156.0.8078.4 headless；全新 `/tmp/vinylink-*` profile，MV3 service worker 确认加载。未使用关闭 CSP/站点隔离/自动播放限制的参数，未登录任何音乐账号。
 
 1. 初始曲目 `https://music.apple.com/us/album/anti-hero/1649434004?i=1649434284` 出现 404、无媒体，无播放证据；保留 `artifacts/spike-first.json`，没有把它当成功。
 2. 改用官方搜索确认的 `https://music.apple.com/us/song/1651516417`（Anti-Hero / Taylor Swift）。在真实 MV3 扩展页内嵌官方播放器，官方控件准确显示名称/歌手，封面 `naturalWidth > 0`。用户式 click 后实际媒体 `playing`、`timeupdate`；8 秒采样进度 7.863903 秒，实际 duration 90.000998 秒。自然结束触发 `pause`、`ended`，均为 90.000998 秒；之后官方提示订阅/登录，媒体暂停并重置。**试听已验证，完整播放未验证。** 证据：[spike.json](../artifacts/spike.json)、[开始截图](../artifacts/spike.png)、[结束截图](../artifacts/spike-ended.png)。官方说明的 30 秒与该曲目实测不同，因此 UI 不硬编码试听时长。

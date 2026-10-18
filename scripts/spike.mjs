@@ -5,7 +5,7 @@ const dir=resolve('artifacts/spike-extension'); await mkdir(dir,{recursive:true}
 await writeFile(dir+'/manifest.json',JSON.stringify({manifest_version:3,name:'XMC playback spike',version:'0.0.1',background:{service_worker:'worker.js'}}));
 await writeFile(dir+'/worker.js','chrome.runtime.onInstalled.addListener(()=>{});');
 await writeFile(dir+'/spike.html','<!doctype html><title>Playback spike</title><iframe width="660" height="175" allow="autoplay; encrypted-media" src="https://embed.music.apple.com/us/song/1651516417"></iframe>');
-const profile=await mkdtemp('/tmp/xmc-spike-'),logs=[]; let context;
+const profile=await mkdtemp('/tmp/vinylink-spike-'),logs=[]; let context;
 try {
  context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,args:[`--disable-extensions-except=${dir}`,`--load-extension=${dir}`]});
  logs.push({browser:context.browser()?.version(),date:new Date().toISOString(),environment:'fresh MV3 extension page, no login, no security bypass flags'});

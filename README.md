@@ -1,4 +1,4 @@
-# X Music Card
+# Vinylink
 
 在本机 X 时间线中识别 Apple Music / Spotify 链接的 Manifest V3 扩展。**当前交付是可安装的降级原型，不是原需求全部验收通过的完整 MVP。**
 
@@ -7,7 +7,7 @@ Apple 单曲可展开可见的官方播放器，试听与登录/地区限制由 
 ## 安装
 
 1. 打开 Chrome `chrome://extensions`，开启“开发者模式”。
-2. “加载已解压的扩展程序”，选择本项目 `dist/`，不要选仓库根目录。也可先解压 `artifacts/x-music-card.zip` 后选择解压目录。
+2. “加载已解压的扩展程序”，选择本项目 `dist/`，不要选仓库根目录。也可先解压 `artifacts/vinylink.zip` 后选择解压目录。
 3. 刷新已有 X 页面。进入包含音乐链接的 post；点“展开”，再点击官方播放器中的播放按钮。
 4. 点另一张 Apple 卡片的“展开”会销毁前一个播放器；关闭后重开会从新播放器开始，不能保存暂停进度。
 
@@ -24,18 +24,18 @@ pnpm test
 pnpm build
 ```
 
-构建产物为 `dist/` 与 `artifacts/x-music-card.zip`。本地隔离浏览器测试：
+构建产物为 `dist/` 与 `artifacts/vinylink.zip`。本地隔离浏览器测试：
 
 ```sh
-PLAYWRIGHT_BROWSERS_PATH=/tmp/xmc-browsers pnpm exec playwright install chromium
-PLAYWRIGHT_BROWSERS_PATH=/tmp/xmc-browsers pnpm smoke
-PLAYWRIGHT_BROWSERS_PATH=/tmp/xmc-browsers pnpm spike
-PLAYWRIGHT_BROWSERS_PATH=/tmp/xmc-browsers node scripts/integration.mjs
+PLAYWRIGHT_BROWSERS_PATH=/tmp/vinylink-browsers pnpm exec playwright install chromium
+PLAYWRIGHT_BROWSERS_PATH=/tmp/vinylink-browsers pnpm smoke
+PLAYWRIGHT_BROWSERS_PATH=/tmp/vinylink-browsers pnpm spike
+PLAYWRIGHT_BROWSERS_PATH=/tmp/vinylink-browsers node scripts/integration.mjs
 ```
 
 `smoke` 完全使用合成 X DOM 和本地 WAV mock，测试实际 MV3 加载、布局和生命周期。`spike` 使用真实 Apple 官方 Embed、全新 profile、不登录，约需两分钟，输出真实状态证据；网络或平台限制可能使它失败，不能据脚本退出码宣称成功，检查 JSON 中的 events/time/错误。`integration` 使用真实 Apple 与合成 X DOM，仍不证明真实 X CSP 可用。所有临时 profile 均自动删除，不读取用户 Chrome 目录。
 
-此受限机器安装依赖使用：`XDG_DATA_HOME=/tmp/xmc-data XDG_CACHE_HOME=/tmp/xmc-cache pnpm install --store-dir /tmp/xmc-pnpm-store`。外网与 Chromium 启动通过平台审批运行，未关闭浏览器安全设置。
+此受限机器安装依赖使用：`XDG_DATA_HOME=/tmp/vinylink-data XDG_CACHE_HOME=/tmp/vinylink-cache pnpm install --store-dir /tmp/vinylink-pnpm-store`。外网与 Chromium 启动通过平台审批运行，未关闭浏览器安全设置。
 
 ## 模块
 
